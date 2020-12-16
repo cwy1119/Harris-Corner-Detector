@@ -37,60 +37,21 @@
 
     - 计算Ix采用的算子
 
-    $$
-    {\left[ {\begin{array}{*{20}{c}}
-    2&1&0&-1&-2\\
-    2&1&0&-1&-2\\
-    4&2&0&-2&-4\\
-    2&1&0&-1&-2\\
-    2&1&0&-1&-2\
-    \end{array}} \right]}
-    $$
+![quicker_d4e9f5ac-8a4d-4c2f-8200-65103a860806.png](https://i.loli.net/2020/12/16/W1DjtAP3U9HECno.png)
 
     - 计算Iy采用的算子
 
-    $$
-    {\left[ {\begin{array}{*{20}{c}}
-    2&2&4&2&2\\
-    1&1&2&1&1\\
-    0&0&0&0&0\\
-    -1&-1&-2&-1&-1\\
-    2&-2&-4&-2&-2\
-    \end{array}} \right]}
-    $$
+![quicker_35522f72-172d-4df7-bb17-41b763e25895.png](https://i.loli.net/2020/12/16/6ObhG9sR4HzpYc3.png)
 
 3. 使用window(x,y)窗口对Ix,Iy进行加权平均,窗口算子如下
-   $$
-   {\left[ {\begin{array}{*{20}{c}}
-       2&4&5&4&2\\
-       4&9&12&9&4\\
-       5&12&15&12&5\\
-       4&9&12&9&4\\
-       2&4&5&4&2
-       \end{array}} \right]}
-   $$
+![quicker_d538cd47-59d0-47b3-a43d-e20dba8cec70.png](https://i.loli.net/2020/12/16/SgkIBGwY5nxzfdv.png)
 
 4. 计算特征矩阵的特征值max, min
 
-$$
-{\left[ {\begin{array}{*{20}{c}}
-   Ix^2&IxIy\\
-   IxIy&Iy^2
-   \end{array}} \right]}
-$$
+![quicker_970c3694-2245-4f36-bf45-d05b6dad182e.png](https://i.loli.net/2020/12/16/cafZEpzoOKBPVlx.png)
 
 5. 根据以下公式计算R的值
-   $$
-   R = detM - k(traceM)^2 
-   $$
-
-$$
-detM =  λ1λ2
-$$
-
-$$
-traceM =  λ1 +  λ2
-$$
+![quicker_eab9c4de-4cc8-4dad-817b-b8db1730f622.png](https://i.loli.net/2020/12/16/8JDTGRPgkfAhL6W.png)
 
 6. 最后根据R的值来选取特征点(其中R值为正且数值较大的点归为角点, R值为负且值较大的点归为边缘点, 剩下的归为块状区域点.
 
